@@ -186,7 +186,7 @@ public abstract class SingletonMonoBehaviorAutoCreateNoDestroy<T> : MonoBehaviou
         }
         else if(objList.Length > 1)
         {
-            act.debug.PrintSystem.Log("You have more than one " + typeof(T).Name + " in the scene. You only need 1, it's a singleton!");
+            //act.debug.PrintSystem.Log("You have more than one " + typeof(T).Name + " in the scene. You only need 1, it's a singleton!");
             foreach(T item in objList)
             {
                 Destroy(item);
@@ -216,7 +216,7 @@ class SingletonGameObject
             s_SingletonObject = GameObject.Find(s_objName);
             if(s_SingletonObject == null)
             {
-                act.debug.PrintSystem.Log("CreateInstance");
+                //act.debug.PrintSystem.Log("CreateInstance");
                 s_SingletonObject = new GameObject(s_objName);
             }
         }
